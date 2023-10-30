@@ -14,8 +14,8 @@ const Dashboard = () => {
     // getData()
     setLoading(true);
     if (specialization) {
-      // fetch(`https://hospital-601o.onrender.com/doctors?specialization=${specialization}`, {
-      fetch(`http://localhost:8080/doctors?specialization=${specialization}`, {
+      fetch(`https://hospital-601o.onrender.com/doctors?specialization=${specialization}`, {
+    //   fetch(`http://localhost:8080/doctors?specialization=${specialization}`, {
         headers: {
           Authorization: localStorage.getItem("token"),
         },
@@ -28,8 +28,8 @@ const Dashboard = () => {
         })
         .catch((err) => console.log(err));
     } else {
-      // fetch(`https://hospital-601o.onrender.com/doctors`, {
-      fetch(`http://localhost:8080/doctors`, {
+      fetch(`https://hospital-601o.onrender.com/doctors`, {
+    //   fetch(`http://localhost:8080/doctors`, {
         headers: {
           Authorization: localStorage.getItem("token"),
         },
